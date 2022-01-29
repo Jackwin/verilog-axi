@@ -497,3 +497,8 @@ Read
 ## Testing
 
 Running the included testbenches requires [cocotb](https://github.com/cocotb/cocotb), [cocotbext-axi](https://github.com/alexforencich/cocotbext-axi), and [Icarus Verilog](http://iverilog.icarus.com/).  The testbenches can be run with pytest directly (requires [cocotb-test](https://github.com/themperek/cocotb-test)), pytest via tox, or via cocotb makefiles.
+
+## Installation Summary
+The verilog-axi depends on the myHDL's cosimulation. First, make sure the cosimulation is installed successfully under myHDL. For the cosim, icarus is preferred.
+
+After installing the cosim following the README.txt in `myhdl/cosimulation/icarus`, copy the `myhdl.vpi` to the `/usr/local/lib/ivl/` in Ubuntu to let the `myhdl.vpi` on the myHDL search path. Otherwise, it pops out the error 'myhdl: Unable to find a myhdl.vpi module on the search path'.
